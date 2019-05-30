@@ -1,0 +1,209 @@
+/* Master styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Nav styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+/* Portfolio styles */
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 100px;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.one-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
+/* Running image animation */
+
+/* .background-run-img {            
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;     
+}
+.run-img-animated {
+    background: url("images/tile002.png");
+    position: relative;
+    width: 43px;
+    height: 42px;
+    top: 450px;
+    left: 0;
+    animation: walk 1s steps(5) infinite, forward 4s linear infinite;
+}
+
+@keyframes walk {            
+    0% {
+        background-position: 0px;               
+    }           
+    100% {
+        background-position: 300px;                
+    }                
+}
+
+@keyframes forward {
+    0% { 
+        transform: translateX(0px);                
+     } 
+     50% {
+        transform: translateX(640px);                
+     }           
+    100% { 
+        transform: translateX(1280px);                
+     }
+} */
+
+/* Animated star image using spritesheet */ 
+
+.run-image-wrapper {
+    background: lightseagreen; 
+    height: 600px;
+} 
+
+.run-img {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: transparent url(images/spritesheet-stars.png) 0 0;
+    height: 107px;    
+    width: 142px;
+    animation: animate 1s steps(12) infinite;
+    -webkit-animation: animate 1s steps(12) infinite;
+    -moz-animation:  animate 1s steps(12) infinite;
+}
+
+@keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1704px 0px;
+    }
+}
+
+@-webkit-keyframes wink {
+    from { background-position: 0 0; }
+    to { background-position: -1704px 0; }
+}
+
+@-moz-keyframes wink {
+    from { background-position: 0 0; }
+    to { background-position: -1704px 0; }
+}
